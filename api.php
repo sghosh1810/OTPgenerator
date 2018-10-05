@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$registration = $_POST['registration'];
+$registration = $_POST['registration']; //This field is not required
 $pass= $_POST['password'];
 $pass=mysql_real_escape_string($pass);
 
