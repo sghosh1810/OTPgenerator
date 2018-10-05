@@ -25,7 +25,7 @@ VALUES ('$pass')";
 if ($conn->query($sql) === TRUE) {
     echo json_encode(array("abc"=>'successfuly registered'));
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo json_encode(array("abc"=>'"Error: " . $sql . "<br>" . $conn->error'));
 }
 
 $conn->close();
